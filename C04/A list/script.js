@@ -15,3 +15,8 @@ function listToArray(list) {
     return a;
 }
 console.log(listToArray({ value: 1, rest: { value: 2, rest: { value: 3, rest: null } } }));
+
+function prepend(element, list) {
+    return { element, rest: list }
+}
+console.log(prepend(10, prepend(20, prepend(30, null))));
